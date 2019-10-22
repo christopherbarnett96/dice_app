@@ -2,12 +2,9 @@ require 'dice_app'
 
 describe Dice do
   it 'Rolls a number between 1 and 6' do
-    expect(subject.roll(1)).to be_between(1, 6)
+    srand 200
+    expect(subject.roll(1)).to eq 1
   end
-
-  # it 'Allows user to roll as many dice as they want' do
-  #   expect(subject.roll(7)).to eq 35
-  # end
 
   it 'Returns an array of scores' do
     srand 200
